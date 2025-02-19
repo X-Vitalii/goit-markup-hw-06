@@ -33,10 +33,13 @@ button {
 
 .container {
   max-width: 320px;
-  padding-left: 16px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  /* padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 .pg-hdr {
@@ -60,14 +63,11 @@ button {
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
-  /* margin-right: 76px; */
 }
 
 .hdr-lst {
   /* display: flex; */
   display: none;
-  /* align-items: center;
-  gap: 40px; */
 }
 
 .mob-m-btn {
@@ -100,21 +100,19 @@ button {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 24px;
   right: 24px;
   padding: 0;
   cursor: pointer;
-  /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    */
   background-color: #ffffff;
 }
 
 .icon-close-mob {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #e7e9fc;
+  background-color: #ffffff;
+  fill: #2e2f42;
 }
 
 .mob-hdr-item:not(:last-child) {
