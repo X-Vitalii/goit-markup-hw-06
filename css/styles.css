@@ -66,7 +66,6 @@ button {
 }
 
 .hdr-lst {
-  /* display: flex; */
   display: none;
 }
 
@@ -82,10 +81,6 @@ button {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  padding: 72px 24px 40px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -93,7 +88,20 @@ button {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mob-menu-box-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .btn-close-mob {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,12 +110,12 @@ button {
   border-radius: 50%;
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 24px;
-  right: 24px;
   padding: 0;
   cursor: pointer;
   background-color: #ffffff;
+}
+.mob-menu-nav {
+  margin-bottom: auto;
 }
 
 .icon-close-mob {
@@ -942,6 +950,12 @@ img {
 /*---others---*/
 
 /*-- Media requests --*/
+
+@media screen and (min-width: 768px) {
+  .mob-menu-box {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
