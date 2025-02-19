@@ -117,6 +117,9 @@ button {
   background: #e7e9fc;
 }
 
+.mob-hdr-item:not(:last-child) {
+  margin-bottom: 40px;
+}
 .mob-item {
   display: block;
   color: #2e2f42;
@@ -125,7 +128,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: left;
-  margin-bottom: 40px;
 }
 
 .mob-cont {
@@ -280,7 +282,7 @@ button {
 }
 
 .section-ot {
-  padding: 96px 28px;
+  padding: 96px 0;
   background-color: #f4f4fd;
 }
 
@@ -304,6 +306,7 @@ button {
 }
 
 .otm-item {
+  background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -410,14 +413,6 @@ button {
   overflow: hidden;
 }
 
-.oprtf-item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.oprtf-item:hover {
-  box-shadow: 0px 3px 3px 0px #d0d1d9;
-}
-
 .oprtf-item:hover .prtf-detail {
   transform: translateY(0);
 }
@@ -455,7 +450,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -620,7 +614,7 @@ img {
 /*-- Ftr  Subscr input class --*/
 
 .ftr-input {
-  width: 264px;
+  width: 288px;
   height: 40px;
   background-color: transparent;
   border: 1px solid rgb(255, 255, 255);
@@ -983,7 +977,6 @@ img {
   .addr-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 12px;
   }
 
@@ -1094,7 +1087,7 @@ img {
   }
 
   .section-ot {
-    padding: 96px 108px;
+    padding: 96px 0;
   }
 
   .ot-list {
@@ -1138,6 +1131,10 @@ img {
     text-align: left;
   }
 
+  .ftr-input {
+    width: 264px;
+  }
+
   /* --- full styles of modal for tab-dt here --- */
 
   .modal {
@@ -1165,6 +1162,17 @@ rule below should be canceled - how?
   /*  button SEND style */
 
   /* --- end of modal --- */
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .ot-container {
+    max-width: 584px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .oprtf-item {
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1201,7 +1209,9 @@ rule below should be canceled - how?
   }
 
   .section-hr {
+    max-width: 1440px;
     padding: 188px 0;
+    margin: 0 auto;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
@@ -1298,6 +1308,14 @@ rule below should be canceled - how?
 
   .oprtf-item {
     flex-basis: calc((100% - 24px * 2) / 3);
+  }
+
+  .oprtf-item:hover {
+    box-shadow: 0px 3px 3px 0px #d0d1d9;
+  }
+
+  .oprtf-item {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .section-ftr {
